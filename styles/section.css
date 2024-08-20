@@ -1,0 +1,83 @@
+
+
+#details{
+
+    & > p{
+        font-family: "Roboto Mono", monospace;
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--content-secondary);
+    }
+
+        & div{
+            & span{
+                color: var(--content-brand);
+                font-size: 0.75rem;
+                line-height: 1.5;
+
+                & svg{
+                     & path{
+                        stroke: var(--content-brand);
+                     }
+                }
+            }
+
+            & p{
+                color: var(--content-secondary);
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+        }
+    
+}
+
+#roullette{
+
+    & h2{
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: var(--content-primary);
+
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    & p{
+        line-height: 1.5;
+        color: var(--content-secondary);
+    }
+
+    & label{
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-weight: bold;
+        
+        color: var(--content-secondary);
+        
+    }
+
+    & input{
+        width: 5.375rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--bg-secondary);
+        border: 0;
+
+        font-size: 2rem;
+        color: var(--content-primary);
+    }
+
+    & button{
+        background-color: var(--bg-tertiary);
+        color: var(--content-primary);
+    }
+}
+
+
+
+
+
+
+
