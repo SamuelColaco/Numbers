@@ -29,7 +29,9 @@ body{
     background-color: var(--bg-primary);
     display: grid;
     place-content: center;
-    padding: 3rem;
+    padding: 1rem;
+
+ 
 }
 
 h1{
@@ -39,4 +41,24 @@ h1{
     text-transform: uppercase;
     font-weight: 880;
     color: var(--content-primary);
+}
+main{
+
+    gap: 6.75rem;
+}
+
+@media  (width <=800px){
+
+    main{
+        flex-direction: column;
+        position: relative;
+
+       gap: 0;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+    
+
 }
