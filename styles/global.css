@@ -30,8 +30,9 @@ body{
     display: grid;
     place-content: center;
     padding: 1rem;
-
- 
+    position: relative;
+    
+    
 }
 
 h1{
@@ -43,9 +44,9 @@ h1{
     color: var(--content-primary);
 }
 main{
-
-    gap: 6.75rem;
+    gap: 10rem;
 }
+
 
 @media  (width <=800px){
 
@@ -59,6 +60,4 @@ main{
     h1{
         font-size: 2.5rem;
     }
-    
-
 }
