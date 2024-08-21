@@ -61,35 +61,43 @@
     </section>
 
     <section id="roullette">
-        <div >
+        <div>
             <h2>Quero sortear:</h2>
             <p>defina o intervalo e a quantidade de números, clique em "Sortear" <br> e veja os resultados na tela. É rápido e fácil!</p>
         </div>
        
 
        <form>
-        <div class="d-flex gap-2  py-4 pb-5 text-center">
-            <fieldset class="d-flex flex-column gap-2 ">
+        <div class="d-flex gap-2 py-4  text-center">
+            <fieldset class="gap-2 ">
                 <label for="numbers">números</label>
                 <input type="text" id="numbers">
             </fieldset>
-            <fieldset class="d-flex flex-column gap-2" >
+            <fieldset class=" gap-2" >
                 <label for="start">De</label>
                 <input type="text" id="start">
             </fieldset>
-            <fieldset class="d-flex flex-column gap-2 ">
+            <fieldset class="gap-2 ">
                 <label for="end">A</label>
                 <input type="text" id="end">
             </fieldset>
         </div>
 
-        <button type="submit" class="btn d-flex  gap-1 w-100 justify-content-center py-3">Sortear <img src="imgs/assets/arrow-right.svg" alt="seta branca para a direita"></button>
+        <div class="d-flex align-items-center gap-2 pb-5">
+            <span id="toggle" class="off"></span> <span>Não repetir número</span>
+        </div>
+            
+        <button type="submit" class="btn d-flex  gap-2 w-100 justify-content-center py-3 px-3">Sortear <img src="imgs/assets/arrow-right.svg" alt="seta branca para a direita"></button>
 
        </form>
     </section>
 
     </main>
+    <div class="test">
+        
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
