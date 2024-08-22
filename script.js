@@ -1,14 +1,19 @@
 
+//Inicio
 
+//Inicializando as variaveis globais
 const inputs = document.querySelectorAll("input")
 const form = document.querySelector("form")
 const span = document.querySelector("#toggle") 
 let result = 0
 let many = []
 
+// Validando o input para só escrever numeros
 inputs.forEach((input) => input.oninput = () => {
     input.value = input.value.replace(/\D/g, "")
 })
+
+//Inicializando o evento de enviar o formulário, no clique do botão
 form.onsubmit = (event) => {
     event.preventDefault()
     
@@ -23,10 +28,13 @@ form.onsubmit = (event) => {
     
 }
 
-
+//Função para sortear os numeros
 function sortNumbers(data){
     
+    //Validando o código com try catch para capturar os erros.
     try {
+
+        //Inicializando as variaveis locais
         const fieldset = form.querySelectorAll("div fieldset")
         const div = form.querySelector("div")
         const h2 = document.querySelector("#roullette div h2")
@@ -36,6 +44,7 @@ function sortNumbers(data){
         const div2 = document.querySelector("#roullette div")
 
         let count = 0
+        //Verificando se os inputs foram preenchidos
         if(data.number == "" || data.start == "" || data.end == ""){
             alert("Por favor preencha os campos")
         }
@@ -43,13 +52,14 @@ function sortNumbers(data){
 
             h2.textContent = "Resultado do sorteio"
             fieldset.forEach((field) => field.style.display = "none")
-    
+            
+            //Iniciando o loop de geração de numeros
              while(count < data.number){
                  let p = document.createElement("p")
                  p.textContent = Math.floor(Math.random() * (Math.floor(data.end)  - Math.ceil(data.start) + 1) + Math.ceil(data.start) )
                  
                  
-                 
+                 //Verificando condições de repetição de numeros
                  if(span.classList.contains("on")){
                      if(!many.includes(Number(p.textContent))){
                          result+=1
@@ -71,7 +81,7 @@ function sortNumbers(data){
                             
                  }
         }
-            
+            //Mudando aspecto da página após o clique e o sorteio
             button.textContent = "Sortear novamente"
             button.appendChild(img)
             img.src = "imgs/assets/restart.svg"
@@ -86,7 +96,7 @@ function sortNumbers(data){
     }
 }
 
-
+//Fazendo o evento de clique no botão de repetição dos numeros
 span.addEventListener("click", () => {
     if(result === 0){
         span.classList.toggle("off")
@@ -97,5 +107,4 @@ span.addEventListener("click", () => {
         alert("Não se pode fazer isso agora")
     }
 })
-
-
+//Fim
